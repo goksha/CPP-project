@@ -36,14 +36,13 @@
                     <i class="fa fa-bars"></i> All category 
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Computer Parts / Accessories</a>
-                    <a class="dropdown-item" href="#">Televisions / Accessories</a>
-                    <a class="dropdown-item" href="#">Mobile Phones / Accessories</a>
-                    <a class="dropdown-item" href="#">Electrical Supplies </a>
+                    {% for classification in links %}
+                    <a class="dropdown-item" href="{{ classification.get_url }}">{{classification.classification_name}}</a>
+                    {% endfor %}
                 </div>
             </div>  <!-- category-wrap.// -->
         </div> <!-- col.// -->
-        <a href="./store.html" class="btn btn-outline-primary">Store</a>
+        <a href="{% url 'products' %}" class="btn btn-outline-primary">Store</a>
         <div class="col-lg  col-md-6 col-sm-12 col">
             <form action="#" class="search">
                 <div class="input-group w-100">
