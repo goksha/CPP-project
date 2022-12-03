@@ -1,32 +1,13 @@
 <header class="section-header">
     <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
-    <div class="container-fluid bg-light text-white">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTop4">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                 <a href="#" class="nav-link">   English </a>
-                
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link"> USD </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
-            <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
-        </ul> <!-- list-inline //  -->
-      </div> <!-- navbar-collapse .// -->
-    </div> <!-- container //  -->
+    
     </nav>
     
     <section class="header-main border-bottom">
         <div class="container-fluid">
     <div class="row align-items-center">
         <div class="col-lg-2 col-md-3 col-6">
-            <a href="./" class="brand-wrap">
+            <a href="{% url 'home' %}" class="brand-wrap">
                 <img class="logo" src="./images/logo.png">
             </a> <!-- brand-wrap.// -->
         </div>
@@ -44,9 +25,9 @@
         </div> <!-- col.// -->
         <a href="{% url 'products' %}" class="btn btn-outline-primary">Store</a>
         <div class="col-lg  col-md-6 col-sm-12 col">
-            <form action="#" class="search">
+            <form action="{% url 'search' %}" class="search" method='GET'>
                 <div class="input-group w-100">
-                    <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+                    <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="keyword" >
                     
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="submit">
@@ -65,9 +46,8 @@
                                 <a href="./register.html"> Register</a>
                             </div>
                         </div>
-                        <a href="./cart.html" class="widget-header pl-3 ml-3">
+                        <a href="{% url 'basket' %}" class="widget-header pl-3 ml-3">
                             <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
-                            <span class="badge badge-pill badge-danger notify">0</span>
                         </a>
                     </div> <!-- widgets-wrap.// -->
                 </div> <!-- col.// -->
