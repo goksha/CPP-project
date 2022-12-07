@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'classifypro.apps.ClassifyproConfig',
     'basket.apps.BasketConfig',
     'members.apps.MembersConfig',
+    'order.apps.OrderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
